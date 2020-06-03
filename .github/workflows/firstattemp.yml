@@ -29,5 +29,6 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: install surge
-      run: sudo npm install --global surge
-     run: surge ./ firstattemp.surge.sh --token $ {{ secrets.SURGE_TOKEN }}
+      run: npm install --global surge
+      - name: deploying using surge
+     run: surge ./ firstattemp.surge.sh --token ${{secrets.SURGE_TOKEN}}
